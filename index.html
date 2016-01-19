@@ -57,7 +57,7 @@ elibri.populateDatabase = function() {
   xmlhttp.onreadystatechange=function() {
     if(xmlhttp.readyState==4) {
       var data = eval( '(' + xmlhttp.responseText + ')' );
-      for(i=0; i<data.length; i++)
+      for(var i=0; i<data.length; i++)
         elibri.addBook(data[i]);
     }
   }
