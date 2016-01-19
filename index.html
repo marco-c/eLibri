@@ -27,7 +27,7 @@ elibri.onerror = function(e) {
 }
 
 elibri.createDatabase = function() {
-  var req = indexedDB.open("elibri",28);
+  var req = indexedDB.open("elibri", 1);
 
   req.onsuccess = function(e) {
     elibri.db = e.target.result;
