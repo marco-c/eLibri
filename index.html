@@ -66,7 +66,7 @@ elibri.addBook = function(book) {
              }
 
   // The key is the link of the book.
-  var req = elibri.db.transaction("elibri", IDBTransaction.READ_WRITE).objectStore("elibri").put(elem, book[3]);
+  var req = elibri.db.transaction("elibri", "readwrite").objectStore("elibri").put(elem, book[3]);
 
   req.onsuccess = function(e) {
     elibri.dataTable.fnAddData(book, true);

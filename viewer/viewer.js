@@ -164,7 +164,7 @@ var PDFView = {
               self.loading = false;
 
               result.pdf_file = data;
-              var reqWrite = db.transaction("elibri", IDBTransaction.READ_WRITE).objectStore("elibri").put(result, link);
+              var reqWrite = db.transaction("elibri", "readwrite").objectStore("elibri").put(result, link);
               reqWrite.onsuccess = function(e) { console.log("Write successful"); };
               reqWrite.onerror = function(e) { console.log("Write unsuccessful"); };
             });
