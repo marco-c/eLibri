@@ -52,7 +52,7 @@ elibri.createDatabase = function() {
 }
 
 elibri.populateDatabase = function() {
-  xmlhttp = new XMLHttpRequest();
+  var xmlhttp = new XMLHttpRequest();
   xmlhttp.open('GET', 'http://abral.altervista.org/apps/libri/elibri.json.php', true);
   xmlhttp.onreadystatechange=function() {
     if(xmlhttp.readyState==4) {
