@@ -3,7 +3,9 @@
 
 'use strict';
 
-var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+if(!('indexedDB' in window)) {
+  window.indexedDB = window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+}
 
 var kDefaultURL = '';
 var kDefaultScale = 1.5;
