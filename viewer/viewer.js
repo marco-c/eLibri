@@ -3,7 +3,7 @@
 
 'use strict';
 
-if(!('indexedDB' in window)) {
+if (!('indexedDB' in window)) {
   window.indexedDB = window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 }
 
@@ -123,7 +123,7 @@ var PDFView = {
   },
 
   open: function pdfViewOpen(url, scale) {
-    var req = indexedDB.open("elibri",28);
+    var req = indexedDB.open("elibri", 1);
     var db = null;
     var self = this;
 
