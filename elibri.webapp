@@ -1,0 +1,27 @@
+{  
+  "version": "1.0.0",  
+  "name": "eLibri",  
+  "description": "Library application to read eBooks",  
+  "icons": {  
+    "16": "/elibri.png",  
+    "48": "/elibri-48.png",  
+    "128": "/elibri-128.png"  
+  },  
+  "developer": {  
+    "name": "Marco Castelluccio",  
+    "url": "http://abral.altervista.org/"  
+  },  
+  "installs_allowed_from": [  
+    "https://apps-preview.mozilla.org"
+  ],  
+  "locales": {
+    "it": {
+      "description": "Applicazione biblioteca per leggere eBook.",
+      "developer": {
+        "name": "Marco Castelluccio",
+        "url": "http://abral.altervista.org/"
+      }  
+    }  
+  },
+  "default_locale": "en"  
+}  
