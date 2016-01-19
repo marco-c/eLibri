@@ -13,7 +13,12 @@
 <script type="text/javascript" src="media/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://browserid.org/include.js"></script>
 <script type="text/javascript" charset="utf-8">
-var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+'use strict';
+
+if (!('indexedDB' in window)) {
+  window.indexedDB = window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+}
+
 var elibri = {};
 elibri.hasToPopulate = false;
 
@@ -81,8 +86,9 @@ elibri.readBooks = function() {
   req.onsuccess = function(e) {
     var result = e.target.result;
     var data = [];
-    for(i=0; i<result.length; i++)
+    for (var i=0; i<result.length; i++) {
       data[i] = result[i].book;
+    }
     elibri.dataTable.fnAddData(data, true);
   };
 
